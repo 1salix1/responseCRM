@@ -1,0 +1,288 @@
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 50;
+    @include respond-to('xs') {
+        transition: 1s;
+        background: transparent;
+        z-index: 200;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        left: 0;
+        margin: 0;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.header__scrolled {
+    transition: 1s;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.header__logo {
+    @include respond-to('xl') {
+        margin-left: 1.5%;
+    }
+    @include respond-to('xs') {
+        margin-left: unset;
+        position: relative;
+        z-index: 100;
+    }
+    img {
+        width: 180px;
+        @include respond-to('xs') {
+            width: 130px;
+        }
+    }
+}
+
+.header__menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include respond-to('xs') {
+        transition: 0.5s;
+        position: fixed;
+        z-index: 90;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 70px;
+        top: 0;
+        left: -101vw;
+        width: 100vw;
+        height: 100vh;
+        background: #16173b;
+        flex-direction: column;
+    }
+}
+
+.header__menu_active {
+    transition: 0.5s;
+    left: 0;
+}
+
+.header__link {
+    position: relative;
+    list-style-type: none;
+    padding: 0 5px;
+    margin-left: 30px;
+    cursor: pointer;
+    a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 14px;
+        font-family: Arial, 'GinraSansLight', sans-serif;
+        font-weight: 300;
+    }
+    @include respond-to('xs') {
+        padding-bottom: 30px;
+        margin-left: 10px;
+        a {
+            font-size: 16px;
+            text-transform: none;
+        }
+    }
+}
+.header__login, .header__phone{
+    display: none;
+    @include respond-to('xs') {
+        display: block;
+    }
+}
+.header__login {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #b2bddb;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.header__submenu_hide, .header__submenu_shown {
+    &::after {
+        display: block;
+        content: "";
+        width: 11px;
+        height: 7px;
+        background-image: url('#{$root_path}/images/icons/caret-down-light-blue.png');
+        background-position: top center;
+        background-repeat: no-repeat;
+        background-size: 11px 7px;
+        position: absolute;
+        top: 7px;
+        right: -14px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+    }
+}
+.header__submenu_shown {
+    &::after {
+        transform: rotate(-90deg);
+    }
+}
+
+.header__submenu {
+    display: none;
+    width: auto;
+    max-width: 250px;
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 5px;
+    padding: 5px 0;
+    transition: all 5s;
+    -webkit-box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.3);
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 100%;
+        width: 100%;
+        height: 32px;
+        background-color: transparent;
+    }
+    .header__has_submenu:hover > & {
+        display: block;
+    }
+
+    &-child {
+        top: 0;
+        left: 100%;
+        margin-left: 10px;
+        margin-top: 0px;
+        &::before {
+            top: 0;
+            right: 100%;
+            height: 100%;
+            background-color: transparent;
+            width: 10px;
+        }
+    }
+
+    &-haschild {
+        .header__sublink-haschild {
+            position: relative;
+            &:hover .header__submenu {
+                display: block;
+            }
+        }
+    }
+
+    li {
+        font-family: 'GinraSansLight', sans-serif;
+        font-size: 16px;
+        line-height: 24px;
+        width: 100%;
+        padding: 0 15px;
+        list-style-type: none;
+        &:hover {
+            background-color: rgba(129, 173, 204, 0.1);
+        }
+        a{
+            display: block;
+            width: 100%;
+            margin-left: 0;
+            color: #4f535f;
+            font-size: 16px;
+            text-transform: none;
+            white-space: nowrap;
+        }
+    }
+    @include respond-to('xs') {
+        width: auto;
+        position: static;
+        background-color: transparent;
+        border-radius: 0;
+        padding: 0;
+        transition: all 0s;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        li {
+            font-size: inherit;
+            line-height: inherit;
+            padding-left: inherit;
+            margin: 15px 0 15px 45px;
+
+            &:hover {
+                background-color: transparent;
+            }
+            a{
+                display: block;
+                width: 100%;
+                margin-left: 0;
+                color: #ffffff;
+                font-size: 16px;
+                text-transform: none;
+
+
+            }
+        }
+    }
+}
+
+.header__button {
+    display: none;
+    @include respond-to('xs') {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 30px;
+        width: 40px;
+        position: relative;
+        z-index: 100;
+        padding: 0;
+        cursor: pointer;
+        span {
+            display: block;
+            border-radius: 10px;
+            transition: 0.1s;
+            width: 100%;
+            background: #fff;
+            height: 5px;
+            &::before, &::after {
+                transition: 0.3s;
+                content: '';
+                position: absolute;
+                border-radius: 10px;
+                background: #fff;
+                left: 0;
+                width: 100%;
+                height: 5px;
+            }
+            &::before {
+                top: 0;
+            }
+            &::after {
+                top: auto;
+                bottom: 0;
+            }
+        }
+    }
+}
+
+.header__button_active {
+    span {
+        display: block;
+        background: transparent;
+        &::before, &::after {
+            transition: 0.3s;
+            top: calc(50% - 0.3vw);
+        }
+        &::before {
+            transform: rotate(-45deg);
+        }
+        &::after {
+            transform: rotate(45deg);
+        }
+    }
+}

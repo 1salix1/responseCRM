@@ -1,0 +1,31 @@
+.ne_section {
+    padding: 70px 0;
+    color: #fff;
+    font-family: "Eina01-Bold", sans-serif;
+    
+    .ne_title1 {
+        text-align: center;
+        font-size: 37px;
+        margin: 20px 0 50px;
+    }
+
+    .ne_subtitle-descr {
+        font-size: 25px;
+        color: #ffc980;
+        margin-bottom: 40px;
+        line-height: 1.42;
+    }
+
+    .ne_history-list {
+
+        .ne_history-item {
+            font-size: 37px;
+            margin-bottom: 25px;
+
+            span {
+                font-size: 25px;
+                font-family: "AvenirNext-Regular", sans-serif;
+            }
+        }
+    }
+}  

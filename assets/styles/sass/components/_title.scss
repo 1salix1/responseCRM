@@ -1,0 +1,43 @@
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-right: 80px;
+    @include respond-to('xs') {
+        flex-direction: column;
+        align-items: center;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+}
+
+.title__headline {
+    font-size: 50px;
+    color: #ffffff;
+    font-family: 'Eina01-Bold', sans-serif;
+    text-align: center;
+    line-height: 0.74;
+    margin-bottom: 29px;
+    @include respond-to('xxs') {
+        font-size: 29px;
+        margin-bottom: 20px;
+    }
+}
+
+.title__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('#{$root_path}/images/Group10.png') no-repeat center center;
+    background-size: contain;
+    height: 83px;
+    position: relative;
+    font-size: 16px;
+    color: #b2bddb;
+    font-family: 'AvenirMedium', sans-serif;
+    @include respond-to('xxs') {
+        font-size: 10px;
+        height: 70px;
+    }
+}

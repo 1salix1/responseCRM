@@ -1,0 +1,454 @@
+body{
+    background: #1f215d no-repeat center top;
+    background-size: 100% auto;
+    position: relative;
+    background-image: url('#{$root_path}/images/header_bg.svg');
+    @include respond-to('xs') {
+        background-size: auto 283vw;
+    }
+
+}
+
+.wrapper {
+    overflow-x: hidden;
+    background: url('#{$root_path}/images/footer.svg') no-repeat center 3316px;
+    position: relative;
+    background-size: 100% auto;
+    &::before {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        background: url('#{$root_path}/images/top_bg.svg') no-repeat;
+        background-size: cover;
+        width: 100%;
+        top: 0;
+        right: 0;
+        left: 0;
+        height: 54vw;
+        min-height: 800px;
+        z-index: -1;
+    }
+    &::after {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        background: url('#{$root_path}/images/top_right_oval.svg') no-repeat;
+        background-size: contain;
+        width: 94%;
+        top: 60px;
+        right: 0;
+        height: 78vw;
+        z-index: -2;
+        @include respond-to('xs') {
+            display: none;
+        }
+    }
+    @include respond-to('md') {
+       background-position: center calc(100% + 1140px);;
+    }
+    @include respond-to('xxs') {
+        background: none;
+    }
+    /*&::before {
+        content: '';
+        pointer-events: none;
+        position: absolute;
+        top: auto;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30vw;
+        background: url('#{$root_path}/images/footer.svg') no-repeat center bottom;
+        background-size: contain;
+    }*/
+}
+
+.wrapper__empty{
+    background: none;
+}
+.wrapper__empty-all{
+    &::before {
+        display: none;
+    }
+    &::after {
+        display: none;
+    }
+}
+
+
+.wrapper__a-drop2{
+     position: relative;
+     &::after {
+         pointer-events: none;
+         content: '';
+         position: absolute;
+         background: url('#{$root_path}/images/a_drop.svg') no-repeat;
+         background-size: contain;
+         width: 60%;
+         top: 33%;
+         right: 0;
+         height: 40vw;
+         z-index: -1;
+     }
+     @include respond-to('xxs') {
+         &::after {
+             width: 140%;
+             height: 150vw;
+         }
+     }
+ }
+
+
+.wrapper__a-drop3{
+    position: relative;
+    &::after {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        background: url('#{$root_path}/images/a_drop.svg') no-repeat;
+        background-size: contain;
+        width: 60%;
+        top: 76%;
+        right: 0;
+        height: 40vw;
+        z-index: -1;
+    }
+    @include respond-to('xxs') {
+        &::after {
+            width: 140%;
+            height: 150vw;
+        }
+    }
+}
+
+.wrapper__a-drop{
+    position: relative;
+    &::before {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        background: url('#{$root_path}/images/a_drop.svg') no-repeat;
+        background-size: contain;
+        width: 60%;
+        top: -24%;
+        right: 0;
+        height: 40vw;
+        z-index: -1;
+    }
+    &::after {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        background: url('#{$root_path}/images/center_oval.svg') no-repeat;
+        background-size: contain;
+        width: 43%;
+        top: 24%;
+        left: 0;
+        height: 40vw;
+        z-index: -1;
+    }
+    @include respond-to('xxs') {
+        &::before {
+            width: 140%;
+            height: 150vw;
+        }
+        &::after {
+            display: none;
+        }
+    }
+}
+
+
+.wrapper__start {
+    position: relative;
+    background: url('#{$root_path}/images/dots.svg');
+    background-size: contain;
+    background-position: 0 160px;
+    background-repeat-y: no-repeat;
+}
+
+.wrapper__start_empty {
+    background: none;
+}
+
+.wrapper__start_empty2 {
+    &::before {
+        background: none;
+    }
+}
+
+.wrapper__space {
+    position: relative;
+    height: 48vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        position: absolute;
+        width: 70%;
+    }
+    &::before {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        background: url('#{$root_path}/images/wrapper-space.png') no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        height: 137vw;
+    }
+    &::after {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+
+        background: url('#{$root_path}/images/wrapper-space-bottom-cubes.png') no-repeat center center;
+        background-size: cover;
+        width: 100%;
+        top: auto;
+        left: 0;
+        bottom: -40vw;
+        height: 34.5vw;
+    }
+}
+
+.wrapper__single {
+    background: url('#{$root_path}/images/single-light.png') no-repeat center center;
+    background-size: contain;
+}
+
+.wrapper__planet {
+    margin-top: 50px;
+    background: url('#{$root_path}/images/wrapper-planet.png') no-repeat;
+    background-size: 100% auto;
+    background-position: bottom;
+    position: relative;
+    @include respond-to('xs') {
+        background-size: auto 350vw;
+    }
+}
+
+.wrapper__card {
+    background: url('#{$root_path}/images/wrapper-card.png') no-repeat;
+    background-size: contain;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-position-x: 450px;
+    background-position-y: 100px;
+    z-index: 0;
+    @include respond-to('md') {
+        width: 83%;
+        background-position-x: 100%;
+        left: 32%;
+    }
+    @include respond-to('xs') {
+        display: none;
+    }
+}
+
+.wrapper__simple2{
+    position: relative;
+    margin-top: 50px;
+    &::before {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        opacity: 0.2;
+        mix-blend-mode: multiply;
+        background: url('#{$root_path}/images/top_left_oval.svg') no-repeat;
+        background-size: contain;
+        width: 63%;
+        top: -7%;
+        left: 0;
+        height: 47vw;
+    }
+
+}
+
+.wrapper__ovals{
+    position: relative;
+    margin-top: 50px;
+    &::before {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -14%;
+        background-image: url('#{$root_path}/images/oval_left.svg');
+        background-position: 0 top;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 38%;
+        height: 55vw;
+        z-index: -1;
+    }
+    &::after {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 30%;
+        background-image: url('#{$root_path}/images/oval_right_2.svg');
+        background-position: 0 top;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 45%;
+        height: 55vw;
+        z-index: -1;
+    }
+}
+
+.wrapper__ovals2{
+    position: relative;
+    margin-top: 50px;
+    &::before {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -14%;
+        background-image: url('#{$root_path}/images/oval_left.svg');
+        background-position: 0 top;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 38%;
+        height: 55vw;
+        z-index: -1;
+    }
+    &::after {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 12%;
+        background-image: url('#{$root_path}/images/oval_right.svg');
+        background-position: 0 top;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 38%;
+        height: 55vw;
+        z-index: -1;
+    }
+}
+
+
+.wrapper__configuration {
+    background: url('#{$root_path}/images/wrapper-configuration.png') no-repeat;
+    background-size: contain;
+}
+
+.wrapper__second-page {
+    background: url('#{$root_path}/images/wrapper-second-page.png') no-repeat;
+    background-size: contain;
+}
+
+.wrapper__advantage {
+    background: url('#{$root_path}/images/wrapper-advantage.png') center;
+    background-size: contain;
+    position: absolute;
+    height: 2100px;
+    width: 100vw;
+    right: -600px;
+    top: -600px;
+    pointer-events: none;
+}
+
+.wrapper__advantage2 {
+    background: url('#{$root_path}/images/wrapper-advantage2.png') center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 2700px;
+    top: -800px;
+    pointer-events: none;
+}
+
+.wrapper__advantage3 {
+    background: url('#{$root_path}/images/wrapper-advantage3.png') center;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    height: 2700px;
+    top: 100px;
+    pointer-events: none;
+}
+
+.wrapper__double-lights {
+    width: 100%;
+    position: relative;
+    &::after {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        background: url('#{$root_path}/images/wrapper-certified.png') no-repeat center;
+        background-size: cover;
+        width: 100%;
+        height: calc(200%);
+        top: -40%;
+    }
+}
+
+.wrapper__partner {
+    width: 100%;
+    position: relative;
+    margin-top: 80px;
+}
+
+.wrapper__get-in-touch {
+    width: 100%;
+    position: relative;
+    &::after {
+        pointer-events: none;
+        content: '';
+        position: absolute;
+        background: url('#{$root_path}/images/wrapper-get-in-touch.png') no-repeat right center;
+        background-size: contain;
+        width: 80%;
+        height: calc(100%);
+        top: -50%;
+        left: auto;
+        right: auto;
+    }
+}
+
+.wrapper__integration{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-size: auto 60%;
+    &::after {
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        background: url('#{$root_path}/images/oval.png') no-repeat right bottom;
+        background-size: contain;
+        width: 67%;
+        height: calc(100%);
+        bottom: 0;
+        left: auto;
+        right: 0;
+        z-index: -1;
+    }
+    &::before {
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        background: url('#{$root_path}/images/oval2.png') no-repeat;
+        background-size: 100% 100%;
+        width: 133%;
+        height: calc(126%);
+        bottom: -56%;
+        right: auto;
+        left: -20%;
+        z-index: -1;
+    }
+    @include respond-to('sm') {
+        &::after {
+            width: 156%;
+        }
+    }
+}
+
+.wrapper__white{
+    background-color: #fff;
+}

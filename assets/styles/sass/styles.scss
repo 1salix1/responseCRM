@@ -1,0 +1,68 @@
+@import 'abstracts/variables';
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+
+@import 'base/normalize';
+@import 'base/fonts';
+@import 'base/utils';
+
+@import 'vendor/slick';
+@import 'vendor/slick-theme';
+
+@import 'components/header';
+@import 'components/footer';
+@import 'components/select';
+@import 'components/wrapper';
+@import 'components/grid';
+@import 'components/events';
+@import 'components/twitter';
+@import 'components/form';
+@import 'components/u-content';
+@import 'components/button';
+@import 'components/base-content';
+@import 'components/platform';
+@import 'components/preview';
+@import 'components/title';
+@import 'components/planet';
+@import 'components/testimonials-blocks';
+@import 'components/playground';
+@import 'components/certified-consultants';
+@import 'components/certified-consultants-summary';
+@import 'components/stats';
+@import 'components/slick-layout';
+@import 'components/slick-layout';
+@import 'components/flip-cards';
+@import 'components/advantage';
+@import 'components/partner';
+@import 'components/they_trust';
+@import 'components/pricing';
+@import 'components/responsePay';
+@import 'components/crmOptions';
+@import 'components/integration_partners';
+@import 'components/responseCRM_Integrations';
+@import 'components/calculator';
+@import 'components/policies';
+@import 'components/contact';
+@import 'components/thankyou';
+@import 'components/modal';
+@import 'components/platform-calculator';
+@import 'components/develop-at-will';
+@import 'components/things-happening';
+@import 'components/getIn-or-createAccount';
+@import 'components/little-object';
+@import 'components/platform-pay';
+@import 'components/integration-top';
+@import 'components/integration-explore';
+@import 'components/integration-integrate';
+@import 'components/integration-build';
+@import 'components/faq';
+@import 'components/tabs';
+@import 'components/covid';
+@import 'components/new-enhancements';
+
+@import 'components/study-case';
+
+svg.b24-crm-button-icon {
+    width: auto;
+    height: auto;
+}

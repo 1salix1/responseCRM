@@ -1,0 +1,50 @@
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: otf eot woff ttf ) {
+    $src: null;
+
+    $extmods: (
+        eot: '?',
+        svg: '#' + str-replace($name, ' ', '_')
+    );
+
+    $formats: (
+        otf: 'opentype',
+        ttf: 'truetype'
+    );
+
+    @each $ext in $exts {
+        $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+        $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+        $src: append($src, url(quote($path + '.' + $extmod)) format(quote($format)), comma);
+    }
+
+    @font-face {
+        font-family: quote($name);
+        font-style: $style;
+        font-weight: $weight;
+        src: $src;
+    }
+}
+
+@mixin require-fonts($fonts) {
+    @each $font_name, $font_path in $fonts {
+        @include font-face($font_name, $root_path + '/' + $font_path);
+    }
+}
+
+@mixin respond-to($breakpoint, $min: null) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @if $min == null {
+            @media #{inspect(map-get($breakpoints, $breakpoint))} {
+                @content;
+            }
+        } @else {
+            @if map-has-key($breakpoints_min, $min) {
+                @media #{inspect(map-get($breakpoints, $breakpoint))} and #{inspect(map-get($breakpoints_min, $min))} {
+                    @content;
+                }
+            }
+        }
+    } @else {
+        @error 'Not found key `#{$breakpoint}`...';
+    }
+}

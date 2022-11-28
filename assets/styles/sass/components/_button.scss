@@ -1,0 +1,80 @@
+.button {
+    outline: none;
+    border: none;
+    font-family: 'AvenirNext-DemiBold', sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 49px;
+    &:hover{
+        text-decoration: none;
+    }
+    &:disabled{
+        background-color: #5a5a5a;
+        cursor: default;
+        &:hover{
+            background-color: #5a5a5a;
+            cursor: default;
+            border:none;
+        }
+    }
+}
+
+.button_theme_pure {
+    background: #4c49fc;
+    color: #fff;
+    font-size: 14px;
+    padding: 20px 20px 16px;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    min-width: 130px;
+    text-align: center;
+    &:hover {
+        color: #fff;
+    }
+}
+
+.button_theme_orange {
+    background: #ff764b;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    min-width: 130px;
+    text-align: center;
+    &:hover {
+        color: #fff;
+    }
+}
+
+.button_theme_transparent {
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 2px solid #909bff;
+    text-align: center;
+    &:hover {
+        color: #fff;
+    }
+}
+
+.button_contact-sales{
+    width: 233px;
+    height: 50px;
+    border: 1px solid #ffffff;
+    letter-spacing: 0.88px;
+}
+
+.button_theme_pure:hover,
+.button_theme_transparent:hover {
+    background: rgba(119, 131, 238, 0.4);
+    border: 2px solid #909bff;
+}
+
+.button__image {
+    margin-left: 10px;
+}

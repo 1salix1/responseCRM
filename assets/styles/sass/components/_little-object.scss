@@ -1,0 +1,92 @@
+.little-object{
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include respond-to('md') {
+        display: none;
+    }
+    z-index: -1;
+}
+
+.little-object__triangle-orange{
+    background-image: url('#{$root_path}/images/triangle_orange.svg');
+    top: 20px;
+    left: -48px;
+    width: 48px;
+    height: 56px;
+}
+
+.little-object__triangle-blue{
+    background-image: url('#{$root_path}/images/triangle_blue.svg');
+    top: 20px;
+    left: 10px;
+    width: 48px;
+    height: 56px;
+}
+
+.little-object__triangle-orange-pricing{
+    top: 340px;
+    left: 10px;
+}
+
+.little-object__triangle-orange-middle{
+    background-image: url('#{$root_path}/images/triangle_orange_middle.svg');
+    bottom: 20px;
+    right: 10px;
+    width: 50px;
+    height: 49px;
+}
+
+.little-object__line-blue{
+    background-image: url('#{$root_path}/images/line_blue.svg');
+    top: -55px;
+    right: 20px;
+    width: 58px;
+    height: 79px;
+}
+
+.little-object__line-blue-2{
+    background-image: url('#{$root_path}/images/line_blue_2.svg');
+    top: 355px;
+    right: 20px;
+    width: 78px;
+    height: 54px;
+}
+
+.little-object__line-blue-responePay{
+    top: 187px;
+    right: 104px;
+}
+
+.little-object__line-orange{
+    background-image: url('#{$root_path}/images/line_orange.svg');
+    top: -8px;
+    right: 63px;
+    width: 80px;
+    height: 73px;
+}
+
+.little-object__circle-blue{
+    background-image: url('#{$root_path}/images/circle_blue.svg');
+    top: -94px;
+    right: 127px;
+    width: 67px;
+    height: 67px;
+}
+
+.little-object__circle-orange{
+    background-image: url('#{$root_path}/images/circle_orange.svg');
+    top: -50px;
+    left: 13px;
+    width: 30px;
+    height: 30px;
+}
+
+.little-object__circle-purple{
+    background-image: url('#{$root_path}/images/circle_purple.svg');
+    top: 240px;
+    right: 80px;
+    width: 67px;
+    height: 67px;
+}

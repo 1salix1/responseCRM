@@ -1,0 +1,51 @@
+.tabs__nav {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 900px;
+    margin:  0 auto 25px;
+    flex-wrap: wrap;
+    @include respond-to('sm') {
+        width: 100%;
+    }
+}
+
+/* Style the buttons that are used to open the tab content */
+.tabs__nav button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    color: #fff;
+    font-size: 20px;
+    width: 250px;
+    border-bottom: 2px solid transparent;
+    @include respond-to('sm') {
+        margin-top: 10px;
+    }
+}
+
+/* Change background color of buttons on hover */
+.tabs__nav button:hover {
+    border-bottom: 2px #fff solid ;
+}
+
+/* Create an active/current tablink class */
+.tabs__nav button.active {
+    border-bottom: 2px #909bff solid ;
+}
+
+/* Style the tab content */
+.tabs__tab {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+.tabs__content .tabs__tab:first-child{
+    display: block;
+}

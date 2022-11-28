@@ -1,0 +1,54 @@
+.select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background: rgba(119, 131, 238, 0.2);
+    border: 2px solid #7783ee;
+    border-radius: 2px;
+    margin-left: 45px;
+    width: 165px;
+    @include respond-to('xs') {
+        display: none;
+    }
+    @include respond-to('xxs') {
+        margin-left: 30px;
+        width: 170px;
+    }
+}
+
+.select__text {
+    color: #fff;
+    font-size: 16px;
+    width: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'AvenirRoman', sans-serif;
+    @include respond-to('xxs') {
+        font-size: 25px;
+    }
+}
+
+.select__button {
+    background: #7783ee;
+    width: 50px;
+    height: 50px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: -2px;
+    @include respond-to('xxs') {
+        padding: 28px 30px;
+    }
+    &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-top: 4px solid transparent;
+        border-left: 5px solid #fff;
+        border-bottom: 4px solid transparent;
+    }
+}

@@ -1,0 +1,34 @@
+
+    .policy__content {
+        margin-left: 1.5%;
+        @include respond-to('xs') {
+            margin-top: 65px;
+        }
+    }
+
+
+.policy__text {
+    color: #b2bddb;
+    margin-top: 40px;
+    border-top: 2px solid #909bff;
+    padding: 40px 15px 15px 15px;
+    text-align: left;
+    font-family: "AvenirNext-Regular", sans-serif;
+}
+
+.policy__text p {
+    margin: 0 0 15px;
+}
+
+.p-content__divider {
+    background: #909bff;
+    height: 2px;
+    width: 100%;
+}
+
+ul
+{
+    margin: 1em 0 1em 0;
+    padding: 0 0 0 40px;
+    list-style-type: disc;
+}

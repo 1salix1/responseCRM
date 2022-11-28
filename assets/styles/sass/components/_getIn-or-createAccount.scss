@@ -1,0 +1,9 @@
+.getIn-or-createAccount{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    @include respond-to('xs') {
+        flex-direction: column;
+        align-items: center;
+    }
+}

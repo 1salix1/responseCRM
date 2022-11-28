@@ -1,0 +1,103 @@
+.integration_cable{
+    width: 100%;
+    @include respond-to('md') {
+        width: 112%;
+        max-width: 125%;
+        margin-left: -4%;
+    }
+    @include respond-to('sm') {
+        width: 162%;
+        max-width: 185%;
+        margin-left: -62%;
+    }
+    @include respond-to('xs') {
+        width: 176%;
+        margin-left: -71%;
+    }
+    @include respond-to('xxs') {
+        width: 181%;
+        margin-left: -74%;
+    }
+}
+
+.integration_top{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    @include respond-to('sm') {
+        flex-direction: column;
+    }
+    @include respond-to('xs') {
+        justify-content: center;
+    }
+}
+.integration_top__image {
+    @include respond-to('xs') {
+        width: 80%;
+    }
+    @include respond-to('xxs') {
+        width: 70%;
+    }
+}
+.integration_top__header{
+    width: 50%;
+    color: #fff;
+    @include respond-to('sm') {
+        width: 83%;
+    }
+}
+.integration_top__header_big{
+    font-family: "Calibri",sans-serif;
+    font-size: 50px;
+    line-height: 1.4;
+    text-decoration: underline;
+    text-decoration-color: #8034b4;
+    margin-bottom: 20px;
+    @include respond-to('xs') {
+        font-size: 44px;
+    }
+    @include respond-to('xxs') {
+        font-size: 31px;
+    }
+}
+
+.integration_top__header_small{
+    font-family: "Arial",sans-serif;
+    font-size: 25px;
+    line-height: 1.4;
+    @include respond-to('xs') {
+        font-size: 21px;
+    }
+    @include respond-to('xxs') {
+        font-size: 18px;
+    }
+}
+
+.integration_top__header_arrows{
+    margin-top: 78px;
+    display: flex;
+    flex-direction: column;
+    @include respond-to('xxs') {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
+.integration_top__header_arrows_arrow{
+    background: url('#{$root_path}/images/arrow.png') no-repeat right center;
+    background-size: auto 35px;
+    font-size: 20px;
+    line-height: 2;
+    width: max-content;
+    padding-right: 50px;
+    color: #fff;
+    &:hover,&:active,&:visited,&:focus{
+        color: #fff;
+    }
+    @include respond-to('xxs') {
+        font-size: 18px;
+        background-size: auto 24px;
+        padding-right: 24px;
+    }
+}

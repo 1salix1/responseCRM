@@ -1,0 +1,66 @@
+.uptime-block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    @include respond-to('xs') {
+        align-items: center;
+    }
+}
+
+.uptime-block__text {
+    font-size: 16px;
+    color: #b2bddb;
+    font-family: 'AvenirMedium', sans-serif;
+    text-align: right;
+    margin-bottom: 20px;
+    @include respond-to('xxs') {
+        font-size: 15px;
+        margin-bottom: 10px;
+    }
+}
+
+.uptime-block__description {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2c2f6c;
+    border-radius: 3px;
+    padding-left: 24px;
+    @include respond-to('xxs') {
+        padding-left: 17px;
+    }
+}
+
+.uptime-block__logo {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.uptime-block__content {
+    padding: 32px 38px 37px 27px;
+    @include respond-to('xxs') {
+        padding: 20px 17px;
+    }
+}
+
+.uptime-block__title {
+    font-size: 22px;
+    color: #fff;
+    font-family: 'JosefinSansBold', sans-serif;
+    padding-bottom: 15px;
+    @include respond-to('xxs') {
+        font-size: 16px;
+        padding-bottom: 12px;
+    }
+}
+
+.uptime-block__item {
+    font-size: 16px;
+    color: #b2bddb;
+    font-family: 'AvenirMedium', sans-serif;
+    @include respond-to('xxs') {
+        font-size: 12px;
+    }
+}

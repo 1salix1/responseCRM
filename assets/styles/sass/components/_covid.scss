@@ -1,0 +1,54 @@
+.covid{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    padding-left: 2%;
+    @include respond-to('sm') {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    @include respond-to('xs') {
+        margin-bottom: 50px;
+    }
+}
+
+.covid__text{
+    color: #ffc980;
+    font-family: "AvenirNext-Regular", sans-serif;
+    font-size: 17px;
+    line-height: 2.1;
+    width: 50%;
+    .covid__text_header{
+        font-family: "AvenirNext-Medium", sans-serif;
+        font-size: 42px;
+        line-height: 1.66;
+        color: #fff;
+    }
+    @include respond-to('sm') {
+         width: 100%;
+        .covid__text_header{
+        text-align: center;}
+     }
+    @include respond-to('xs') {
+        .covid__text_header{
+            font-size: 36px;
+        }
+    }
+    @include respond-to('xxs') {
+        font-size: 14px;
+        .covid__text_header{
+            font-size: 26px;
+        }
+    }
+}
+
+.covid__video{
+    width: 45%;
+    border: 5px solid #000;
+    outline: none;
+    @include respond-to('sm') {
+        margin-top: 25px;
+        width: 90%;
+    }
+}

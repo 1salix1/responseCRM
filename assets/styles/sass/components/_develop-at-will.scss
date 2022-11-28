@@ -1,0 +1,138 @@
+.develop-at-will{
+    background-color: #0e1136;
+    border-radius: 6px;
+    padding: 50px 90px 0 90px;
+    position: relative;
+    @include respond-to('xs') {
+        padding: 25px 45px 0 45px;
+    }
+}
+.develop-at-will__header {
+    color: #fff;
+    font-family: 'Eina01-Bold', sans-serif;
+    font-size: 38px;
+    line-height: 1.71;
+    @include respond-to('xs') {
+        margin-top: 0;
+        text-align: center;
+    }
+    @include respond-to('xxs') {
+        font-size: 30px;
+    }
+}
+
+.develop-at-will__description {
+    color: #cbc9ff;
+    font-family: 'AvenirNext-Regular', sans-serif;
+    font-size: 18px;
+    line-height: 2;
+    width: 100%;
+    @include respond-to('xxs') {
+        font-size: 14px;
+        width: 100%;
+    }
+}
+
+.develop-at-will__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .platform {
+        width: 310px;
+    }
+    @include respond-to('xs') {
+        flex-direction: column;
+        align-items: center;
+        .platform {
+            width: auto;
+        }
+    }
+}
+
+.develop-at-will__button{
+    width: 223px;
+    position: absolute;
+    bottom: -24.5px;
+    left: 90px;
+    @include respond-to('xs') {
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+.develop-at-will__platform_header {
+    color: #fff;
+    font-family: 'Eina01-Bold', sans-serif;
+    font-size: 22px;
+    line-height: 1.95;
+    @include respond-to('xs') {
+        font-size: 18px;
+    }
+}
+
+.develop-at-will__platform_item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 33px;
+    @include respond-to('xs') {
+        margin-bottom: 20px;
+    }
+    .develop-at-will__platform_header {
+        position: relative;
+        transition: 0.4s;
+    }
+}
+
+.develop-at-will__platform_item_active {
+    .develop-at-will__platform_icon-group {
+        padding-left: 40px;
+        transition: 0.4s;
+        @include respond-to('xs') {
+            padding-left: 20px;
+        }
+        @include respond-to('xxs') {
+            padding-left: 30px;
+        }
+    }
+    .develop-at-will__platform_header {
+        transition: 0.4s;
+        color: #7783ee;
+    }
+}
+
+.develop-at-will__platform_icon-group {
+    box-sizing: content-box;
+    transition: 0.4s;
+    margin-right: 25px;
+    @include respond-to('xs') {
+        margin-right: 14px;
+    }
+}
+
+.develop-at-will__platform_icon{
+    max-width: 39px;
+    @include respond-to('xs') {
+        max-width: 20px;
+    }
+}
+
+.develop-at-will__platform_icon-group_theme_payment {
+
+}
+
+.develop-at-will__platform_icon-group_theme_customers {
+    position: relative;
+
+}
+
+.develop-at-will__platform_icon-group_theme_subscr {
+    position: relative;
+
+}
+
+.develop-at-will__platform_icon-group_theme_reporting {
+    position: relative;
+
+}

@@ -1,0 +1,40 @@
+.faq {
+    margin-top: 10px;
+    details{
+        color: #fff;
+        font-size: 18px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        summary{
+            border: 0;
+            outline: none;
+            list-style: none;
+            cursor: pointer;
+            &::-webkit-details-marker {
+                display: none
+            }
+            &:before {
+                content: '\f0fe';
+                font-family: FontAwesome;
+                margin-right: 7px;
+            }
+        }
+        .faq__text{
+            font-weight: 400;
+            font-family: Arial, GinraSansLight;
+            margin-top: 10px;
+            padding-left: 20px;
+            ul{
+                margin: 0;
+            }
+            a{
+                color: #fff;
+                font-weight: 600;
+            }
+        }
+    }
+    details[open] summary:before {
+        content: '\f146';
+    }
+}

@@ -1,0 +1,144 @@
+.stats {
+    display: flex;
+    flex-direction: column;
+}
+
+.stats__achievement {
+    max-width: 480px;
+    margin-left: 70px;
+    @include respond-to('xs') {
+        align-self: center;
+        &:last-of-type {
+            margin-top: 70px;
+        }
+    }
+}
+
+.stats__top {
+    /*display: flex;
+    align-items: flex-start;
+    justify-content: center;*/
+}
+
+.stats__top_left-top {
+    justify-content: flex-start;
+    @include respond-to('xs') {
+        justify-content: center;
+    }
+}
+
+
+.stats__icon {
+    background-repeat: no-repeat;
+    background-position: center top;
+    width: 45px;
+    height: 55px;
+    position: relative;
+    &:before {
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        background-size: contain;
+        width: 69px;
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 2px;
+    }
+}
+
+.stats__icon_yellow {
+    background-image: url('#{$root_path}/images/stats-users.png');
+    &:before {
+        background-color: #7783ee;
+    }
+}
+
+.stats__icon_green {
+    background-image: url('#{$root_path}/images/stats-processed.png');
+    &:before {
+        background-color: #87f7b4;
+    }
+}
+
+.stats__icon_blue {
+    background-image: url('#{$root_path}/images/stats-uptime.png');
+    &:before {
+        background-color: #7783ee;
+    }
+}
+
+.stats__header {
+    font-size: 18px;
+    line-height: 2.39;
+    color: #ffffff;
+    font-family: 'Eina01-Bold', sans-serif;
+    text-align: left;
+}
+
+.stats__header-nowrap {
+    white-space: nowrap;
+}
+
+.stats__text {
+    font-size: 15px;
+    line-height: 2.33;
+    color: #ffffff;
+    font-family: 'AvenirNext-Regular', sans-serif;
+    margin-top: 20px;
+    @include respond-to('xxs') {
+        font-size: 14px;
+        line-height: 30px;
+        margin-top: 25px;
+    }
+}
+
+
+.stats__achievement_left {
+    text-align: left;
+    @include respond-to('md') {
+        max-width: 380px;
+    }
+    @include respond-to('xs') {
+        max-width: 90%;
+        text-align: center;
+    }
+}
+
+
+.stats__achievements {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+    @include respond-to('xs') {
+        flex-direction: column;
+    }
+}
+
+.stats__achievement_no-margin{
+    margin-left: 0;
+}
+
+.stats__people {
+    width: 95%;
+    max-width: 560px;
+    align-self: center;
+    @include respond-to('xs') {
+        margin-bottom: 30px;
+    }
+}
+
+.stats-jobs {
+    text-align: left;
+}
+
+.stats-hours {
+    text-align: left;
+}
+
+.stats-rate {
+    text-align: left;
+}

@@ -1,0 +1,37 @@
+.thankyou__header {
+    text-align: center;
+    color: #ffffff;
+    font-size: 56px;
+    font-family: "AvenirMedium",sans-serif;
+    padding-bottom: 40px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 0;
+        right: 0;
+        background: #909bff;
+        height: 2px;
+        width: 40px;
+        margin: auto;
+    }
+    @include respond-to('xxs') {
+        font-size: 30px;
+    }
+}
+
+.thankyou__text {
+    font-family: "AvenirMedium", sans-serif;
+    font-size: 16px;
+    color: #b2bddb;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+    p{
+        margin-bottom: 15px;
+    }
+    span{
+        color: #fff;
+    }
+}

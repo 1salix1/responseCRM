@@ -1,0 +1,43 @@
+.things-happening{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.things-happening__item{
+    width: 272px;
+    text-align: center;
+    .platform__divider{
+        margin: 31px auto 12px;
+    }
+    @include respond-to('xs') {
+        width: auto;
+    }
+
+}
+.things-happening__item{
+    @include respond-to('xs') {
+        margin-top: 35px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+.things-happening__item:first-of-type{
+    margin-left: 35px;
+    @include respond-to('xs') {
+        margin-left: 0;
+    }
+}
+.things-happening__item_header {
+    color: #fff;
+    font-family: "Eina01-Bold", sans-serif;
+    font-size: 18px;
+    line-height: 2.39;
+}
+.things-happening__item_description {
+    color: #ffc388;
+    font-family: "AvenirNext-Regular", sans-serif;
+    font-size: 15px;
+    line-height: 2.33;
+}

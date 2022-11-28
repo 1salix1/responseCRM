@@ -1,0 +1,122 @@
+$color-aqua: #90e9ff;
+$color-blue: #314ae0;
+$color-dark-blue: #283a69;
+$color-deep-blue: #0c112f;
+$color-light-blue: rgba(129,173,204,1);
+$color-lightest-brown: #c6b1b1;
+$color-melon: #ffc980;
+$color-yellow: #ffc980;
+$color-bright-melon:#ffb77f;
+$color-pink: #ff7db2;
+$color-dark-pink: #ab4166;
+$color-salamander: #ff8f6f;
+$color-orange: rgba(255,118,75,1);
+$color-dark-orange: #ef8848;
+$color-brown-orange: #b35235;
+$color-wine: #9f2850;
+
+$color-body: #ffffff;
+$color-dark: #4f535f;
+$color-dark-purple: #37394f;
+$color-gray: #aaacb0;
+$color-grey: #aaacb0;
+$color-green: #ace29e;
+$color-light-gray: #98a3b5;
+$color-light-grey: #98a3b5;
+$color-lightest-gray: #fbfbfb;
+$color-lightest-grey: #fbfbfb;
+
+.color-aqua {
+	color: $color-aqua !important;
+}
+.color-dark-blue {
+	color: $color-dark-blue !important;
+}
+.color-deep-blue {
+	color: $color-deep-blue !important;
+}
+.color-light-blue {
+	color: $color-light-blue !important;
+}
+.color-lightest-brown {
+	color: $color-lightest-brown !important;
+}
+.color-melon,
+.color-yellow {
+	color: $color-melon !important;
+}
+.color-bright-melon {
+	color: $color-bright-melon !important;
+}
+.color-pink {
+	color: $color-pink !important;
+}
+.color-dark-pink {
+	color: $color-dark-pink !important;
+}
+.color-orange {
+	color: $color-orange !important;
+}
+.color-dark-orange {
+	color: $color-dark-orange !important;
+}
+.color-brown-orange {
+	color: $color-brown-orange !important;
+}
+.color-salamander {
+	color: $color-salamander !important;
+}
+a.color-salamander,
+.color-salamander a {
+	color: $color-salamander !important;
+	&:hover {
+		color: $color-yellow !important;
+	}
+}
+.color-wine {
+	color: $color-wine !important;
+}
+.bg-dark-purple {
+	background-color: $color-dark-purple !important;
+}
+.bg-lightest-gray,
+.bg-lightest-grey {
+	background-color: $color-lightest-gray !important;
+}
+.color-black {
+	color: black !important;
+}
+.color-blue {
+	color: $color-blue !important;
+}
+.color-dark {
+	color: $color-dark !important;
+}
+.color-dark-purple {
+	color: $color-dark-purple !important;
+}
+.color-gray,
+.color-grey {
+	color: $color-gray !important;
+}
+.color-light-blue {
+	color: $color-light-blue !important;
+}
+.color-light-gray,
+.color-light-grey {
+	color: $color-light-gray !important;
+}
+.color-lightest-gray,
+.color-lightest-grey {
+	color: $color-lightest-gray !important;
+}
+
+@mixin font-family-muli {
+	font-family: 'Muli',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+@mixin font-family-eina01-bold {
+	font-family: 'Eina01-Bold',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}   
+@mixin font-family-poppins {
+	font-family: 'Poppins',-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+} 

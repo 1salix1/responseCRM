@@ -1,0 +1,166 @@
+.twitter {
+    max-width: 500px;
+    width: 95%;
+    height: 420px;
+    box-shadow: 0 30px 100px -8px rgba(0, 27, 83, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    position: relative;
+    background-color: #1b2936;
+    &::before{
+        content: "";
+        position: absolute;
+        top: -45px;
+        left: -70px;
+        width: 119px;
+        height: 95px;
+        background-image: url('#{$root_path}/images/twitter-bg-logo.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.twitter__scroll-area {
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 4px;
+    background-color: #1b2936;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 10px;
+    img {
+        max-width: 80%;
+    }
+    &::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        background-color: #262960;
+        opacity: 0.8;
+
+    }
+
+    &::-webkit-scrollbar-thumb:hover {
+        opacity: 1;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-track:hover {
+
+        background-color: transparent;
+    }
+}
+
+.twitter__post:not(:last-child) {
+    margin-bottom: 30px;
+}
+
+.twitter__logo-title {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.twitter__logo {
+    width: 37px;
+    height: 37px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url('#{$root_path}/images/twitter-logo.png');
+    margin-right: 15px;
+}
+
+.twitter__title {
+
+    a{
+        font-size: 16px;
+        line-height: 16px;
+        color: #ffffff;
+        font-family: 'Helvetica', sans-serif;
+        margin-bottom: 6px;
+        text-decoration: none;
+    }
+    h5{
+        font-size: 14px;
+        line-height: 28px;
+        color: #909eab;
+        font-family: 'Helvetica', sans-serif;
+    }
+}
+
+.twitter__logotype {
+    width: 17px;
+    height: 17px;
+    background-image: url('#{$root_path}/images/twitter-logotype.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-left: auto;
+}
+
+.twitter__text {
+    font-size: 13px;
+    line-height: 1.38;
+    font-family: "AvenirNext-Regular", sans-serif;
+    color: #f3fafe;
+    margin-top: 20px;
+    a{
+        color: #4a93c5;
+    }
+}
+
+.twitter__icons-date {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.twitter__icons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 65px;
+    a {
+        display: block;
+        width: 24px;
+        height: 26px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        &:first-child {
+          background-image: url('#{$root_path}/images/twitter-like.svg');
+        }
+
+        /*&:last-child {
+          background-image: url('#{$root_path}/images/twitter-login.png');
+        }*/
+    }
+}
+
+.twitter__date {
+    font-size: 14px;
+    line-height: 1.29;
+    font-family: 'Helvetica', sans-serif;
+    color: #697882;
+    a {
+        color: #b2bddb;
+        text-decoration: none;
+        &:active {
+            color: #b2bddb;
+        }
+    }
+}
+.MediaCard-mediaContainer.js-cspForcedStyle.MediaCard--roundedTop.MediaCard--roundedBottom{
+    margin-top: 15px;
+    padding-bottom: 0!important;
+}
+

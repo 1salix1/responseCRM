@@ -1,0 +1,97 @@
+@import "mixins";
+
+body {
+	@include font-family-muli;
+	font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #ffffff;
+}
+a {
+	color: $color-melon;
+	transition: 0.3s;
+	&:hover {
+		color: lighten($color-orange, 10%);
+		text-decoration: none;
+	}
+}
+.main-header {
+	.nav-item.active a,
+	.nav-link.active {
+		color: #ffffff;
+	}
+}
+p {
+	line-height: 35px;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	@include font-family-eina01-bold;
+}
+h1, .h1 {
+	font-size: 50px;
+	line-height: 75px;
+	margin-bottom: 15px;
+}
+h2, .h2 {
+	font-size: 38px;
+	line-height: 55px;
+	margin-bottom: 15px;
+}
+h3, .h3 {
+	font-size: 24px;
+	line-height: 29px;
+}
+h4, .h4 {
+	font-size: 18px;
+	line-height: 37px;
+    margin-bottom: 5px;
+}
+h5, .h5 {
+	font-size: 16px;
+	line-height: 28px;
+    margin-bottom: 5px;
+}
+h6, .h6 {
+	font-size: 14px;
+	line-height: 20px;
+    margin-bottom: 5px;
+}
+.lead {
+	color: $color-lightest-brown;
+}
+h1 + .lead, .h1 + .lead {
+	line-height: 2.1;
+	margin-bottom: 45px;
+}
+.lead + .buttons-wrapper,
+.lead + .button-wrapper {
+}
+button {
+	&:focus {
+		outline: 0 dotted;
+		outline: 0 auto -webkit-focus-ring-color;
+	}
+}
+.dropdown-item {
+	&:focus,
+	&:hover {
+		background-color: rgba(129,173,204,0.1);
+	}
+	&.active, &:active {
+		color: $color-dark;
+		background-color: rgba(129,173,204,0.2);
+	}
+}
+
+.navbar-nav{
+	align-items: center;
+}
+
+@media (max-width: 1200px) {
+	.navbar-nav{
+		align-items: flex-start;
+	}
+}
+
+
+

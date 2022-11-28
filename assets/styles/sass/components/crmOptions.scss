@@ -1,0 +1,93 @@
+.crmOptions{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.crmOptions__header {
+    text-align: center;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 2.71;
+    font-family: "Eina01-Bold",sans-serif;
+    padding-bottom: 30px;
+    position: relative;
+    @include respond-to('xxs') {
+        font-size: 18px;
+    }
+}
+
+.crmOptions__option {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+    border-radius: 6px;
+    background-color: #ffffff;
+    width: 95%;
+    min-height: 150px;
+    max-width: 920px;
+    padding: 40px 0 20px;
+    @include respond-to('xs') {
+        flex-direction: column;
+        margin: 50px 0;
+        padding: 20px;
+    }
+}
+
+.crmOptions__text {
+    font-size: 12px;
+    line-height: 2.25;
+    font-family: 'AvenirNext-Medium', sans-serif;
+    color: #000;
+    max-width: 450px;
+    margin-right: 0%;
+    @include respond-to('sm') {
+        margin-right: 0;
+    }
+    @include respond-to('xs') {
+        margin: 20px 0;
+    }
+}
+
+.crmOptions__logo {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img{
+        max-height: 90px;
+        max-width: 150px;
+    }
+    @include respond-to('xs') {
+        width: auto;
+    }
+}
+.crmOptions__price {
+    font-size: 16px;
+    line-height: 1.56;
+    font-family: 'Eina01-Bold', sans-serif;
+    color: #000;
+    width: 150px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    span{
+        font-size: 26px;
+    }
+    label{
+        font-size: 14px;
+        font-family: 'AvenirNext-Medium', sans-serif;
+
+    }
+    span{
+        font-size: 14px;
+        font-family: 'AvenirNext-DemiBold', sans-serif;
+    }
+    @include respond-to('xs') {
+        width: auto;
+        text-align: center;
+    }
+}

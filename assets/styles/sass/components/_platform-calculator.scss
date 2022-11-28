@@ -1,0 +1,205 @@
+.platform-calculator {
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    &:not(:first-of-type) {
+        margin-top: 40px;
+    }
+    @include respond-to('xxs') {
+        margin-top: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &:nth-child(4) {
+        margin-left: 10px;
+        @include respond-to('sm') {
+            margin-left: unset;
+        }
+    }
+}
+.platform-calculator__image{
+    width: 62.5%;
+    margin-left: -10%;
+    margin-right: 10%;
+    @include respond-to('xs') {
+        width: 90%;
+        margin: 0;
+    }
+}
+.platform-calculator__information{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.platform-calculator_theme_simple {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include respond-to('xs') {
+
+    }
+}
+
+.platform-calculator__icon {
+    position: relative;
+    height: 40px;
+    width: 60px;
+    margin-right: 20px;
+    object-fit: contain;
+    @include respond-to('xxs') {
+        margin-right: 0;
+    }
+}
+
+.platform-calculator__divider {
+    height: 2px;
+    width: 69px;
+    margin: 0 0 12px;
+    @include respond-to('xxs') {
+        margin: 15px auto 12px;
+    }
+}
+
+.platform-calculator__divider_theme_red {
+    background: #b35235;
+}
+
+.platform-calculator__divider_theme_green {
+    background: #a1f1b7;
+}
+
+.platform-calculator__divider_theme_blue {
+    background: #7783ee;
+}
+
+.platform-calculator__divider_theme_yellow {
+    background: #e8ff7d;
+}
+
+.platform-calculator__header {
+    color: #fff;
+    font-family: 'Eina01-Bold', sans-serif;
+    font-size: 18px;
+    line-height: 2.39;
+}
+
+.platform-calculator__description {
+    color: #fff;
+    font-family: 'Eina01-Bold', sans-serif;
+    font-size: 16px;
+    line-height: 2;
+    @include respond-to('xxs') {
+        font-size: 12px;
+    }
+}
+
+.platform-calculator__description2 {
+    color: #7783ee;
+    font-family: 'Eina01-Bold', sans-serif;
+    font-size: 18px;
+    line-height: 2;
+    text-decoration: none;
+    @include respond-to('xxs') {
+        font-size: 12px;
+    }
+}
+
+.platform-calculator__item {
+    cursor: pointer;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    .platform-calculator__header {
+        position: relative;
+        transition: 0.4s;
+        margin-top: 10px;
+    }
+}
+
+.platform-calculator__item_active {
+    .platform-calculator__icon-group {
+        padding-left: 40px;
+        transition: 0.4s;
+        @include respond-to('xs') {
+            padding-left: 15px;
+        }
+        @include respond-to('xxs') {
+            padding-left: 40px;
+        }
+    }
+    .platform-calculator__header {
+        transition: 0.4s;
+        color: #7783ee;
+    }
+    .platform-calculator__header::after {
+        content: '';
+        position: absolute;
+        border-top: 5px solid transparent;
+        border-left: 8px solid #7783ee;
+        border-bottom: 5px solid transparent;
+        top: 10px;
+        left: auto;
+        right: -20px;
+    }
+}
+
+.platform-calculator__icon-group {
+    width: 90px;
+    height: 90px;
+    box-sizing: content-box;
+    transition: 0.4s;
+}
+
+.platform-calculator__icon-group_theme_payment {
+    background: url('#{$root_path}/images/icons/groups/payment-back.png') no-repeat 0 0;
+    background-size: 60px;
+}
+
+.platform-calculator__icon-group_theme_customers {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -10px;
+        left: 0;
+        background: url('#{$root_path}/images/icons/groups/customers-back.png') no-repeat 0 0;
+        background-size: 60px;
+    }
+}
+
+.platform-calculator__icon-group_theme_subscr {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -20px;
+        left: 0;
+        background: url('#{$root_path}/images/icons/groups/subscr-back.png') no-repeat 0 0;
+        background-size: 76px;
+    }
+}
+
+.platform-calculator__icon-group_theme_reporting {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -10px;
+        left: 0;
+        background: url('#{$root_path}/images/icons/groups/reporting-back.png') no-repeat 0 0;
+        background-size: 60px;
+    }
+}

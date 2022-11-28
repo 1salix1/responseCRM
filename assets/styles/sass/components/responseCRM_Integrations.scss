@@ -1,0 +1,31 @@
+.responseCRM_Integrations {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.responseCRM_Integrations__underheader {
+    font-size: 16px;
+    font-family: 'AvenirNext-Medium', sans-serif;
+    color: #b2bddb;
+    text-align: center;
+}
+.responseCRM_Integrations__logo {
+    margin: 10px auto 25px;
+    height: 80px;
+}
+
+.responseCRM_Integrations__text {
+    font-family: "AvenirNext-Italic", sans-serif;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    max-width: 400px;
+}
+
+.responseCRM_Integrations__may_more{
+    font-family: "AvenirNext-Medium", sans-serif;
+    font-size: 20px;
+    color: #b2bddb;
+    text-align: center;
+    max-width: 400px;
+}

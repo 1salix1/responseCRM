@@ -1,0 +1,37 @@
+$root_path: '../../assets';
+
+$breakpoints: (
+    'xl': (max-width: 1899px),
+    'lg': (max-width: 1599px),
+    'md': (max-width: 1199px),
+    'sm': (max-width: 959px),
+    'xs': (max-width: 859px),
+    'xxs': (max-width: 499px)
+);
+
+$breakpoints_min: (
+    'lg': (min-width: 1319px)
+);
+
+$fonts: (
+    'OpenSansRegular': 'fonts/OpenSans/OpenSansRegular/OpenSansRegular',
+    'AvenirMedium': 'fonts/Avenir/AvenirMedium/AvenirMedium',
+    'AvenirOblique': 'fonts/Avenir/AvenirOblique/AvenirOblique',
+    'AvenirBlack': 'fonts/Avenir/AvenirBlack/AvenirBlack',
+    'AvenirRoman': 'fonts/Avenir/AvenirRoman/AvenirRoman',
+    'CatamaranMedium': 'fonts/Catamaran/CatamaranMedium/CatamaranMedium',
+    'JosefinSansBold': 'fonts/JosefinSans/JosefinSansBold/JosefinSansBold',
+    'GinraSansLight': 'fonts/GinraSan/GinraSansLight/GinraSansLight',
+    'GinoraSansRegular': 'fonts/GinoraSans/GinoraSansRegular/GinoraSansRegular',
+    'JosefinSansRegular': 'fonts/JosefinSans/JosefinSansRegular/JosefinSansRegular',
+    'CatamaranRegular': 'fonts/Catamaran/CatamaranRegular/CatamaranRegular',
+    'icomoon': 'fonts/icomoon/icomoon',
+    'AvenirNext-Medium': 'fonts/AvenirNext/AvenirNext-Medium/AvenirNext-Medium',
+    'AvenirNext-Regular': 'fonts/AvenirNext/AvenirNext-Regular/AvenirNext-Regular',
+    'AvenirNext-Italic': 'fonts/AvenirNext/AvenirNext-Italic/AvenirNext-Italic',
+    'AvenirNext-DemiBold': 'fonts/AvenirNext/AvenirNext-DemiBold/AvenirNext-DemiBold',
+    'Eina01-Bold': 'fonts/Eina01/Eina01-Bold/Eina01-Bold',
+    'FontAwesome': 'fonts/FontAwesome/fontawesome-webfont'
+);
+
+$container-max-width: 1200px;

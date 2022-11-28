@@ -1,0 +1,44 @@
+.partner__flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    @include respond-to('xs') {
+        flex-direction: column;
+    }
+}
+
+.partner__header{
+    color: #fff;
+    font-family: "Eina01-Bold", sans-serif;
+    font-size: 38px;
+    text-align: left;
+    line-height: 1.66;
+    margin-left: 5%;
+    @include respond-to('xxs') {
+        font-size: 20px;
+    }
+}
+
+.partner__image {
+    flex: 1;
+}
+
+.partner__description {
+    margin-top: 50px;
+    flex: 1;
+    font-family: 'AvenirNext-Regular', sans-serif;
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 2.33;
+    margin-left: 5%;
+    p:not(:first-of-type) {
+        margin-top: 50px;
+    }
+    span {
+        font-family: 'AvenirNext-DemiBold', sans-serif;
+    }
+    @include respond-to('xs') {
+        margin-top: 50px;
+    }
+}
